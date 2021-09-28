@@ -1,4 +1,7 @@
+# Spotify to Figma
 This simple plugin allows you to get data from Spotify onto your canvas. 
+
+![decorative](https://github.com/qurle/spotify-to-figma/blob/main/Cover.png?raw=true)
 
 ## **How to use**
 
@@ -21,7 +24,7 @@ This plugin was designed to work with arrays of data (several albums, playlist t
 
 ## Roadmap
 
-_This plugin was created for specific needs and its development is dependent on the demand. _
+_This plugin was created for specific needs and its development is dependent on the demand._
 
 Please, suggest the needed features. I guess the next steps could be:
 
