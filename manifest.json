@@ -3,5 +3,8 @@
   "id": "1006955584406522418",
   "api": "1.0.0",
   "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
   "ui": "ui.html"
 }

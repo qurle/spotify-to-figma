@@ -14,7 +14,7 @@ const finishMsgs = ["Done!", "You got it!", "Your playlists, sir!", "My job here
 const light: Paint = { type: 'SOLID', color: { r: 0.988, g: 0.988, b: 0.988 } }
 const light50: Paint = { type: 'SOLID', color: { r: 0.988, g: 0.988, b: 0.988 }, opacity: 0.5 }
 const dark: Paint = { type: 'SOLID', color: { r: 0.192, g: 0.192, b: 0.192 } }
-const defaultFont: FontName = { family: 'Roboto', style: 'Regular' }
+const defaultFont: FontName = { family: 'Inter', style: 'Regular' }
 const interMedium: FontName = { family: 'Inter', style: 'Medium' }
 const interBold: FontName = { family: 'Inter', style: 'Bold' }
 
@@ -154,9 +154,9 @@ figma.ui.onmessage = msg => {
 
       // Showing name
       const name = figma.createText()
+      name.fontName = interMedium
       name.characters = item.name
       name.fontSize = 16
-      name.fontName = interMedium
       name.resize(cover.width, 16)
       name.textAutoResize = "HEIGHT"
       name.textAlignHorizontal = "CENTER"

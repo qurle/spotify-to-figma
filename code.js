@@ -19,7 +19,7 @@ const finishMsgs = ["Done!", "You got it!", "Your playlists, sir!", "My job here
 const light = { type: 'SOLID', color: { r: 0.988, g: 0.988, b: 0.988 } };
 const light50 = { type: 'SOLID', color: { r: 0.988, g: 0.988, b: 0.988 }, opacity: 0.5 };
 const dark = { type: 'SOLID', color: { r: 0.192, g: 0.192, b: 0.192 } };
-const defaultFont = { family: 'Roboto', style: 'Regular' };
+const defaultFont = { family: 'Inter', style: 'Regular' };
 const interMedium = { family: 'Inter', style: 'Medium' };
 const interBold = { family: 'Inter', style: 'Bold' };
 let mainframe;
@@ -136,9 +136,9 @@ figma.ui.onmessage = msg => {
             array.push(cover);
             // Showing name
             const name = figma.createText();
+            name.fontName = interMedium;
             name.characters = item.name;
             name.fontSize = 16;
-            name.fontName = interMedium;
             name.resize(cover.width, 16);
             name.textAutoResize = "HEIGHT";
             name.textAlignHorizontal = "CENTER";
