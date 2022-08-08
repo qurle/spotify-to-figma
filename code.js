@@ -145,6 +145,26 @@ figma.ui.onmessage = msg => {
             name.fills = [light];
             name.y = itemArrayEdge(array).bottom + mMargin;
             array.push(name);
+            if (items.type === ItemType.TRACK) {
+                c("Fetching artists from playlist");
+                const artists = figma.createText();
+                let artistsStr = "";
+                for (let j = 0; j < item.album.artists.length; j++) {
+                    c("Name: " + item.artists[j].name);
+                    artistsStr += item.artists[j].name;
+                    if (j < item.artists.length - 1)
+                        artistsStr += ", ";
+                }
+                artists.characters = artistsStr;
+                artists.fontSize = 16;
+                artists.fontName = interMedium;
+                artists.resize(cover.width, 16);
+                artists.textAutoResize = "HEIGHT";
+                artists.textAlignHorizontal = "CENTER";
+                artists.fills = [light50];
+                artists.y = itemArrayEdge(array).bottom + sMargin;
+                array.push(artists);
+            }
             // Showing artist (for albums)
             if (items.type === ItemType.ALBUM) {
                 const artists = figma.createText();
